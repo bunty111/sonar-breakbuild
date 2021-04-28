@@ -5,7 +5,7 @@ node() {
         
         git 'https://github.com/vytec-app/vytecapp.git'
         
-        mvnHome = tool 'maven-3.6.3'
+        mvnHome = tool 'maven'
     }
      
     stage("sonar"){
