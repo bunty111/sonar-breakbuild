@@ -20,7 +20,7 @@ node() {
     stage("sonar-qualitygate"){
 	    withCredentials([string(credentialsId: 'sonar_token', variable: 'sonar_token')]) {
 	    sh 'sh breakbuild.sh http://ip-172-31-47-61.us-east-2.compute.internal:9000 "sonar.login=52b5b0610360297f8ad77eabda67fba79c0f06c6"'
-            -Dsonar.analysis.mode=true	    
+            -D sonar.analysis.mode=true	    
 	    }
     }
     stage('Build') {
