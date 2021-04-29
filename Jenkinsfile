@@ -3,7 +3,7 @@ node() {
     def mvnHome
     stage('Preparation') { 
         
-        git 'https://github.com/bunty111/sonar-breakbuild.git'
+        scm checkout
         
         mvnHome = tool 'maven'
     }
