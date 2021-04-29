@@ -37,6 +37,7 @@ wait_for_success=true
 while [ "${wait_for_success}" = "true" ]
 do 
 echo "curl -s -u "${SONAR_ACCESS_TOKEN}": "${SONAR_INSTANCE}"/api/ce/task?id=${ce_task_id} | jq -r .task.status"
+echo "$(curl -s -u "${SONAR_ACCESS_TOKEN}": "${SONAR_INSTANCE}"/api/ce/task?id=${ce_task_id}"
   ce_status=$(curl -s -u "${SONAR_ACCESS_TOKEN}": "${SONAR_INSTANCE}"/api/ce/task?id=${ce_task_id} | jq -r .task.status)
 
   echo "QG Script --> Status of SonarQube task is ${ce_status}"
