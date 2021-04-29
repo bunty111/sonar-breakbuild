@@ -12,7 +12,7 @@ node() {
       withSonarQubeEnv('sonarqube-rec') {
               withEnv(["MVN_HOME=$mvnHome"]) {      
                
-               sh '"$MVN_HOME/bin/mvn" org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
+               sh '"$MVN_HOME/bin/mvn" sonar:sonar'
             
 		      }
           }   
