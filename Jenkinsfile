@@ -12,8 +12,7 @@ node() {
       withSonarQubeEnv('sonarqube-rec') {
               withEnv(["MVN_HOME=$mvnHome"]) {      
                
-               sh '"$MVN_HOME/bin/mvn" sonar:sonar'
-            
+               sh '"$MVN_HOME/bin/mvn" sonar:sonar -D sonar.login=52b5b0610360297f8ad77eabda67fba79c0f06c6'
 		      }
           }   
     } 
