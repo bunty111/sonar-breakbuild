@@ -3,7 +3,7 @@ node() {
     def mvnHome
     stage('Preparation') { 
         
-        scm checkout
+       checkout scm
         
         mvnHome = tool 'maven'
     }
