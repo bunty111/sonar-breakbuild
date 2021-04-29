@@ -3,7 +3,7 @@ node() {
     def mvnHome
     stage('Preparation') { 
         
-        git 'https://github.com/vytec-app/vytecapp.git'
+        git 'https://github.com/bunty111/sonar-breakbuild.git'
         
         mvnHome = tool 'maven'
     }
